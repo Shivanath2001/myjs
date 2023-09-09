@@ -1,5 +1,5 @@
 
-// how to add click event in multiple element
+// how to add click event in multiple element ...
 
             const btn=document.querySelectorAll(".mybtn button")
             console.log(btn);// it gives 3 button
@@ -55,8 +55,74 @@
                     console.log("event terget -->",event.target);
                })}
 
-               const butt=document.querySelectorAll(".mybtn button")
+               const butt=document.querySelectorAll(".eventobj button")
                butt.forEach(button=>{
-                button.target.style.backgroundColor="red"
+                button.addEventListener("click",function(e){
+                   e.target.style.backgroundColor="red"
+                   e.target.style.color="white"
+                })
                })
-              
+
+               
+               
+               // keypress event
+               const key=document.body
+               
+               key.addEventListener("keypress",function(e){
+                   console.log(e.key)
+                })
+
+    //event bubbling 
+
+        //when we apply event in the parent then it reflect to their child
+
+        //mouseover event
+                
+            // some event occur when mouse over on the element 
+            const grandparent=document.querySelector(".box1")
+            const parent=document.querySelector(".box2")
+            const child=document.querySelector(".box3")
+            // console.log(box3);
+            child.addEventListener("mouseover",function(){
+                console.log("my mouse over.....! ");
+               child.style.backgroundColor="green"
+            })//here mouseover  apply in box3  , but  it  work in  both box-1 and box-2 
+            parent.addEventListener("mouseover",function(){
+                console.log("my mouse over.....! ");
+               parent.style.backgroundColor="blue"
+            })//here mouseover  apply in box3  , but  it  work in  both box-1 and box-2 
+            
+            grandparent.addEventListener("mouseover",function(){
+                console.log("my mouse over.....! ");
+                grandparent.style.backgroundColor="red"
+            })//here mouseover  apply in box3  , but  it  work in  both box-1 and box-2 
+            
+        //mouseleave event
+            // some event occur when mouse leavef on the element 
+            child.addEventListener("mouseleave",function(){
+                        console.log("my mouse  leave .....!");
+                        child.style.backgroundColor="red"
+                })
+            parent.addEventListener("mouseleave",function(){
+                        console.log("my mouse  leave .....!");
+                        parent.style.backgroundColor="green"
+                })
+                grandparent.addEventListener("mouseleave",function(){
+                        console.log("my mouse  leave .....!");
+                        grandparent.style.backgroundColor="blue"
+                })
+
+        // click   
+             
+            child.addEventListener("click",function(){
+                console.log("click is on box-1.....!");
+                child.style.backgroundColor="blue"
+                })
+                parent.addEventListener("click",function(){
+                    console.log("click is on box-2.....!");
+                    parent.style.backgroundColor="red"})
+                    
+            grandparent.addEventListener("click",function(){
+                        console.log("click is on box-3.....!");
+                        grandparent.style.backgroundColor="green"
+                    })//here mouseover  apply in box3 , but it  work in both box-1 and box-2 
