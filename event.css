@@ -1,3 +1,48 @@
 .eventobj{
     margin-top: 4rem;
 }
+.key_mouse{
+    display: flex;
+
+margin-top: 7rem;
+justify-content: center;
+text-align: center;
+align-items: center;
+}
+.box1{
+    display: flex;
+    max-height: 250px;
+    height: 250px;
+    width: 250px;
+    max-width: 250px;
+    background: #87badf98;
+    align-items: center;
+    
+    justify-content: center;
+}
+.box2{
+    display: flex;
+    /* margin-top: 1.9rem;
+    margin-right: 1.9rem; */
+    max-height: 170px;
+    height: 250px;
+    width: 250px;
+    max-width: 170px;
+    background: #87badf98;
+    justify-content: center;
+    align-items: center;
+}
+.box3{
+    /* margin-top: 1.9rem;
+    margin-right: 1.9rem; */
+    
+    max-height: 100px;
+    height: 250px;
+    width: 250px;
+    display: flex;
+    max-width: 100px;
+    background: #87badf98;
+   
+text-align: center;
+
+}
