@@ -1,5 +1,5 @@
 
-// how to add click event in multiple element ...
+// how to add click event in multiple element
 
             const btn=document.querySelectorAll(".mybtn button")
             console.log(btn);// it gives 3 button
